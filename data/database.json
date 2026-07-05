@@ -1,0 +1,385 @@
+{
+  "users": [
+    {
+      "id": "USR001",
+      "name": "ZEE",
+      "username": "ZEE",
+      "email": "ZEE@gmail.com",
+      "role": "admin",
+      "passwordHash": "90e6e03a30a470340006454dda33ba54be6f1ed1d50ebb072ab7b48ab4435069"
+    },
+    {
+      "id": "USR003",
+      "name": "Rega",
+      "email": "rega@gmail.com",
+      "role": "customer",
+      "passwordHash": "47b61308b1c4f68eb6aaa3ba8f38a492640275bee6af01af992de8ed04a84d97",
+      "createdAt": "2026-07-03T07:44:28.099Z",
+      "username": "rega"
+    },
+    {
+      "id": "USR004",
+      "name": "Bintang",
+      "email": "bintang@gmail.com",
+      "role": "customer",
+      "passwordHash": "a61ed1c53abbf6c37dc385fb07ea8903a8b0449a4215081729710b85f7fbd580",
+      "createdAt": "2026-07-03T08:10:11.757Z",
+      "username": "bintang"
+    },
+    {
+      "id": "USR005",
+      "name": "Rega1",
+      "email": "rega1@gmail.com",
+      "role": "customer",
+      "passwordHash": "3f284f0ab1acd892c38d800f36c0e630170456b0afed4923d236ec472fcb47ac",
+      "createdAt": "2026-07-03T08:40:04.160Z",
+      "username": "rega1"
+    },
+    {
+      "id": "USR005",
+      "name": "Rivalga",
+      "username": "rivalga",
+      "email": "",
+      "role": "customer",
+      "passwordHash": "41595d017c9eb1ccbaad6b7636e76908e09aa0eabb2f9e0dd71f7327f322fbc5",
+      "createdAt": "2026-07-05T14:03:46.416Z"
+    },
+    {
+      "id": "USR006",
+      "name": "rega1234",
+      "username": "rega1234",
+      "email": "rega1234@gmail.com",
+      "role": "customer",
+      "passwordHash": "47b61308b1c4f68eb6aaa3ba8f38a492640275bee6af01af992de8ed04a84d97",
+      "createdAt": "2026-07-05T14:38:46.702Z"
+    },
+    {
+      "id": "USR007",
+      "name": "chel d mugi",
+      "username": "chel d mugi",
+      "email": "chechel@gmail.com",
+      "role": "customer",
+      "passwordHash": "e9fa54a928b1af1de924d6d21de21511cff3e1e1db96683e0e1fed241ddfc639",
+      "createdAt": "2026-07-05T15:28:21.008Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT001",
+      "createdAt": "2026-07-03T09:10:51.118Z",
+      "title": "Jakarta Future Tech Summit",
+      "category": "Technology",
+      "location": "Jakarta Convention Center",
+      "date": "2026-08-18",
+      "time": "09:00",
+      "price": 275000,
+      "quota": 220,
+      "sold": 70,
+      "remainingQuota": 150,
+      "revenue": 19250000,
+      "demandLevel": "Low",
+      "description": "Konferensi teknologi tentang AI, cloud, cybersecurity, dan product growth untuk mahasiswa, founder, dan developer.",
+      "status": "deleted"
+    },
+    {
+      "id": "EVT002",
+      "createdAt": "2026-07-05T15:15:07.033Z",
+      "title": "Nusantara Indie Music Night",
+      "category": "Music",
+      "location": "Basket Hall Senayan",
+      "date": "2026-08-29",
+      "time": "19:30",
+      "price": 300000,
+      "quota": 600,
+      "sold": 408,
+      "remainingQuota": 192,
+      "revenue": 122400000,
+      "demandLevel": "Medium",
+      "description": "Malam musik indie dengan band lokal, food tenant, dan area komunitas kreatif.",
+      "status": "published"
+    },
+    {
+      "id": "EVT003",
+      "title": "UX Research Practical Lab",
+      "category": "Workshop",
+      "location": "Bandung Creative Hub",
+      "date": "2026-09-07",
+      "time": "10:00",
+      "price": 325000,
+      "quota": 60,
+      "sold": 42,
+      "description": "Workshop intensif untuk riset pengguna, usability testing, dan presentasi insight.",
+      "status": "published"
+    },
+    {
+      "id": "EVT004",
+      "createdAt": "2026-07-04T13:56:10.838Z",
+      "title": "Stand Up Comedy",
+      "category": "Entertainment",
+      "location": "Lapangan Merdeka",
+      "date": "2026-08-01",
+      "time": "11:00",
+      "price": 100000,
+      "quota": 400,
+      "sold": 4,
+      "remainingQuota": 398,
+      "revenue": 200000,
+      "demandLevel": "Low",
+      "description": "Stand Comedy pasti lucu",
+      "status": "published"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "TKT001",
+      "eventId": "EVT001",
+      "userId": "USR002",
+      "buyerName": "Pembeli Awal",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-SEED-001",
+      "status": "checked-in",
+      "createdAt": "2026-07-03T00:00:00.000Z",
+      "checkedInAt": "2026-07-04T14:17:26.163Z"
+    },
+    {
+      "id": "TKT002",
+      "createdAt": "2026-07-03T07:16:38.961Z",
+      "eventId": "EVT001",
+      "userId": "USR002",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-A5RBQP",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T14:17:28.896Z"
+    },
+    {
+      "id": "TKT003",
+      "createdAt": "2026-07-03T07:17:17.635Z",
+      "eventId": "EVT001",
+      "userId": "USR002",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-KG5NRK",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-05T13:56:06.841Z"
+    },
+    {
+      "id": "TKT004",
+      "createdAt": "2026-07-03T07:21:29.446Z",
+      "eventId": "EVT002",
+      "userId": "USR002",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 150000,
+      "code": "SMX-EVT002-5IMNXV",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T13:50:25.404Z"
+    },
+    {
+      "id": "TKT005",
+      "createdAt": "2026-07-03T07:23:50.580Z",
+      "eventId": "EVT001",
+      "userId": "USR002",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-JRC181",
+      "status": "active",
+      "checkedIn": false
+    },
+    {
+      "id": "TKT006",
+      "createdAt": "2026-07-03T07:45:23.769Z",
+      "eventId": "EVT001",
+      "userId": "USR003",
+      "buyerName": "rega",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-8ZKLDO",
+      "status": "active",
+      "checkedIn": false
+    },
+    {
+      "id": "TKT007",
+      "createdAt": "2026-07-03T08:10:28.482Z",
+      "eventId": "EVT001",
+      "userId": "USR004",
+      "buyerName": "Bintang",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-NIFE0R",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T14:18:02.465Z"
+    },
+    {
+      "id": "TKT008",
+      "createdAt": "2026-07-03T08:35:24.989Z",
+      "eventId": "EVT002",
+      "userId": "USR003",
+      "buyerName": "Rega Rivalga Wijaya",
+      "quantity": 1,
+      "totalPrice": 150000,
+      "code": "SMX-EVT002-FGNPOB",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T14:18:01.318Z"
+    },
+    {
+      "id": "TKT009",
+      "createdAt": "2026-07-03T09:09:41.426Z",
+      "eventId": "EVT001",
+      "userId": "USR004",
+      "buyerName": "Farrel",
+      "quantity": 1,
+      "totalPrice": 275000,
+      "code": "SMX-EVT001-L803Z4",
+      "status": "active",
+      "checkedIn": false
+    },
+    {
+      "id": "TKT010",
+      "createdAt": "2026-07-04T12:50:39.764Z",
+      "eventId": "EVT002",
+      "userId": "USR003",
+      "buyerName": "Rega",
+      "quantity": 66,
+      "totalPrice": 9900000,
+      "code": "SMX-EVT002-IKMLIX",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T15:35:15.201Z"
+    },
+    {
+      "id": "TKT011",
+      "createdAt": "2026-07-04T12:56:24.079Z",
+      "eventId": "EVT002",
+      "userId": "USR003",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 150000,
+      "code": "SMX-EVT002-BDHFQ8",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T15:35:16.449Z"
+    },
+    {
+      "id": "TKT012",
+      "createdAt": "2026-07-04T14:42:06.118Z",
+      "eventId": "EVT002",
+      "userId": "USR003",
+      "buyerName": "Farrel",
+      "quantity": 19,
+      "totalPrice": 2850000,
+      "code": "SMX-EVT002-EAMJUU",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T15:35:17.557Z"
+    },
+    {
+      "id": "TKT013",
+      "createdAt": "2026-07-04T14:46:46.772Z",
+      "eventId": "EVT002",
+      "userId": "USR001",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 150000,
+      "code": "SMX-EVT002-56ZVVA",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-04T15:35:19.188Z"
+    },
+    {
+      "id": "TKT014",
+      "createdAt": "2026-07-05T13:52:31.466Z",
+      "eventId": "EVT004",
+      "userId": "USR003",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 100000,
+      "code": "SMX-EVT004-NK4M7C",
+      "status": "active",
+      "checkedIn": false
+    },
+    {
+      "id": "TKT015",
+      "createdAt": "2026-07-05T13:53:33.343Z",
+      "eventId": "EVT004",
+      "userId": "USR003",
+      "buyerName": "Rega",
+      "quantity": 1,
+      "totalPrice": 100000,
+      "code": "SMX-EVT004-HROW8M",
+      "status": "active",
+      "checkedIn": false
+    },
+    {
+      "id": "TKT016",
+      "createdAt": "2026-07-05T13:56:40.513Z",
+      "eventId": "EVT002",
+      "userId": "USR001",
+      "buyerName": "Farrel",
+      "quantity": 1,
+      "totalPrice": 150000,
+      "code": "SMX-EVT002-DENAEJ",
+      "status": "checked-in",
+      "checkedIn": false,
+      "checkedInAt": "2026-07-05T13:56:46.405Z"
+    },
+    {
+      "id": "TKT017",
+      "createdAt": "2026-07-05T15:29:05.849Z",
+      "eventId": "EVT004",
+      "userId": "USR007",
+      "buyerName": "Rega",
+      "quantity": 2,
+      "totalPrice": 200000,
+      "code": "SMX-EVT004-50O8TF",
+      "status": "active",
+      "checkedIn": false
+    }
+  ],
+  "sessions": [
+    {
+      "id": "SES002",
+      "userId": "USR001",
+      "token": "b36c8cf1fb92d95d91acd280f7781618cccb708bcd1bf3ab8b6b50808b50a950",
+      "createdAt": "2026-07-05T13:46:07.578Z",
+      "expiresAt": "2026-07-06T13:46:07.578Z"
+    },
+    {
+      "id": "SES004",
+      "userId": "USR001",
+      "token": "9424df1408b85bb59c47eeb23fede10c941fdf55dca8ebf962cf8d5b98a14bd9",
+      "createdAt": "2026-07-05T14:32:55.039Z",
+      "expiresAt": "2026-07-06T14:32:55.039Z"
+    },
+    {
+      "id": "SES004",
+      "userId": "USR001",
+      "token": "780d70810a915cf0d3b6cd8dd90191461af4311f3103e0fd40bc8097698951e3",
+      "createdAt": "2026-07-05T15:39:29.609Z",
+      "expiresAt": "2026-07-06T15:39:29.609Z"
+    },
+    {
+      "id": "SES005",
+      "userId": "USR001",
+      "token": "9063f727a93cff5ca842220240b2683b82950e3bfb3c863dcaee3999db3705f2",
+      "createdAt": "2026-07-05T15:39:30.323Z",
+      "expiresAt": "2026-07-06T15:39:30.323Z"
+    },
+    {
+      "id": "SES005",
+      "userId": "USR003",
+      "token": "8defa397cc05b68fd9f3d62f477b908d8241caa7c710286f297657608c97b132",
+      "createdAt": "2026-07-05T15:44:45.428Z",
+      "expiresAt": "2026-07-06T15:44:45.428Z"
+    }
+  ]
+}

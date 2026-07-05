@@ -1,0 +1,28 @@
+Nama Tim:
+- ZEE
+
+Anggota Tim:
+- 241112797 - Victoria Lusiana Manullang
+- 241110764 - Angelica Anastasia Manurung
+- 241111446 - Farrel Bintang Safarringga
+- 241112979 - Rega Rivalga Wijaya
+
+Teknologi yang Digunakan:
+- Node.js native HTTP server
+- JavaScript ES Modules
+- HTML, CSS, dan JavaScript vanilla
+- Database JSON pada data/database.json
+- REST API
+- Middleware custom untuk logger, security header, JSON content-type, dan auth context
+- Autentikasi dan otorisasi role admin/customer
+- Server-Sent Events untuk real-time update
+
+Template yang Digunakan:
+- Tidak menggunakan template eksternal. Tampilan dibuat sendiri dengan HTML, CSS, dan JavaScript.
+
+Link Hosting:
+- Isi link hosting Render di sini
+
+Akun Admin:
+- Email: ZEE@gmail.com
+- Password: ZEE241112979

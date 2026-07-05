@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEE - Smart Event and Ticketing System</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <section id="authView" class="login-page">
+      <div class="login-brand">
+        <span class="brand-mark">ZEE</span>
+        <span>Smartix</span>
+      </div>
+      <section class="auth-panel" aria-label="Autentikasi pengguna">
+        <div class="auth-heading">
+          <p class="eyebrow">Smart event and ticketing system</p>
+          <h1 id="authTitle">Masuk ke Smartix</h1>
+          <p id="authSubtitle">Masuk untuk memesan tiket dan melihat kode tiket digitalmu.</p>
+        </div>
+        <form id="authForm" class="auth-form">
+          <input id="authUsernameInput" name="username" type="text" placeholder="Username" autocomplete="username" hidden disabled />
+          <input id="authEmailInput" name="email" type="email" placeholder="Email" autocomplete="email" required />
+          <input name="password" type="password" placeholder="Password" autocomplete="current-password" required />
+          <button id="authSubmitButton" class="primary-button" type="submit">Login</button>
+          <button id="authModeButton" class="ghost-button auth-switch-button" type="button">Buat Akun Baru</button>
+        </form>
+        <p id="authHelper" class="auth-helper">Belum punya akun? Buat akun baru untuk mulai booking tiket.</p>
+        <div id="authResult" class="notice" hidden></div>
+      </section>
+    </section>
+
+    <div id="appShell" class="app-shell" hidden>
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="ZEE home">
+          <span class="brand-mark">ZEE</span>
+          <span>Smartix</span>
+        </a>
+        <nav class="nav-tabs" aria-label="Navigasi utama">
+          <button class="nav-button active" data-view="home">Events</button>
+          <button class="nav-button" data-view="tickets">Tickets</button>
+          <button class="nav-button" data-view="admin">Admin</button>
+        </nav>
+        <div class="account-box">
+          <span id="authStatus">Guest</span>
+          <button id="logoutButton" class="small-button" type="button" hidden>Logout</button>
+        </div>
+      </header>
+
+      <main>
+      <section id="homeView" class="view active-view">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Smart event and ticketing system</p>
+            <h1 id="heroTitle">Kelola event, booking tiket, dan check-in dalam satu website.</h1>
+            <p id="heroDescription" class="hero-text">
+              ZEE membantu peserta menemukan event terbaik, memesan tiket digital, dan
+              membantu panitia memantau penjualan secara real-time.
+            </p>
+          </div>
+          <div class="hero-panel" aria-label="Ringkasan platform">
+            <div>
+              <span class="metric-value" id="heroEventCount">0</span>
+              <span class="metric-label">Published events</span>
+            </div>
+            <div>
+              <span class="metric-value" id="heroTicketCount">0</span>
+              <span class="metric-label">Tickets sold</span>
+            </div>
+            <div>
+              <span class="metric-value" id="rtcStatus">Off</span>
+              <span class="metric-label">Real-time sync</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input id="searchInput" type="search" placeholder="Cari event, lokasi, kategori" />
+          <select id="categoryFilter" aria-label="Filter kategori">
+            <option value="all">Semua kategori</option>
+            <option value="Technology">Technology</option>
+            <option value="Music">Music</option>
+            <option value="Workshop">Workshop</option>
+          </select>
+        </div>
+
+        <section id="homeContentGrid" class="content-grid">
+          <div>
+            <div class="section-heading">
+              <h2>Upcoming Events</h2>
+              <p id="eventSectionDescription">Pilih event dan pesan tiket digital.</p>
+            </div>
+            <div id="eventList" class="event-grid"></div>
+          </div>
+
+          <aside id="bookingPanel" class="booking-panel">
+            <h2>Booking Ticket</h2>
+            <form id="bookingForm">
+              <label>
+                Event
+                <select id="bookingEvent" name="eventId" required></select>
+              </label>
+              <label>
+                Nama Pembeli
+                <input name="buyerName" type="text" placeholder="Masukkan nama" required />
+              </label>
+              <label>
+                Jumlah Tiket
+                <input name="quantity" type="number" min="1" value="1" required />
+              </label>
+              <div class="booking-total" aria-live="polite">
+                <span>Total Bayar</span>
+                <strong id="bookingTotal">Rp 0</strong>
+              </div>
+              <button class="primary-button" type="submit">Book Ticket</button>
+            </form>
+            <div id="bookingResult" class="notice" hidden></div>
+          </aside>
+        </section>
+      </section>
+
+      <section id="ticketsView" class="view">
+        <div class="section-heading compact">
+          <h1>Digital Tickets</h1>
+          <p>Tiket yang sudah dibooking akan tampil dengan kode unik untuk check-in.</p>
+        </div>
+        <div id="ticketSearchPanel" class="ticket-toolbar" hidden>
+          <input id="ticketSearchInput" type="search" placeholder="Cari kode, pembeli, event, lokasi, atau status" />
+        </div>
+        <div id="ticketActionResult" class="notice" hidden></div>
+        <div id="ticketList" class="ticket-grid"></div>
+      </section>
+
+      <section id="adminView" class="view">
+        <div class="admin-layout">
+          <section>
+            <div class="section-heading compact">
+              <h1>Admin Dashboard</h1>
+              <p>Ringkasan penjualan dan performa event.</p>
+            </div>
+            <div id="dashboardCards" class="dashboard-grid"></div>
+
+            <div class="panel static-panel">
+              <h2>Popular Events</h2>
+              <div id="popularEventList" class="compact-list"></div>
+            </div>
+
+            <div class="panel static-panel">
+              <h2>Manage Events</h2>
+              <div id="adminEventList" class="admin-event-list"></div>
+            </div>
+          </section>
+
+          <aside class="panel">
+            <h2 id="eventFormTitle">Create Event</h2>
+            <form id="eventForm" class="stacked-form">
+              <input name="eventId" type="hidden" />
+              <label>
+                Nama Event
+                <input name="title" type="text" data-lock-after-sale required />
+              </label>
+              <label>
+                Kategori
+                <input name="category" type="text" data-lock-after-sale required />
+              </label>
+              <label>
+                Lokasi
+                <input name="location" type="text" data-lock-after-sale required />
+              </label>
+              <div class="form-row">
+                <label>
+                  Tanggal
+                  <input name="date" type="date" data-lock-after-sale required />
+                </label>
+                <label>
+                  Jam
+                  <input name="time" type="time" data-lock-after-sale required />
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Harga
+                  <input name="price" type="text" inputmode="numeric" data-lock-after-sale required />
+                </label>
+                <label>
+                  Kuota
+                  <input name="quota" type="number" min="1" required />
+                </label>
+              </div>
+              <label>
+                Deskripsi
+                <textarea name="description" rows="4" data-lock-after-sale required></textarea>
+              </label>
+              <div class="button-row">
+                <button id="eventSubmitButton" class="primary-button" type="submit">Publish Event</button>
+                <button id="eventCancelButton" class="ghost-button" type="button" hidden>Cancel Edit</button>
+              </div>
+            </form>
+            <div id="eventFormResult" class="notice" hidden></div>
+          </aside>
+        </div>
+      </section>
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

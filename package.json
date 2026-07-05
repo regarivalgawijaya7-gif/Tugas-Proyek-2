@@ -1,0 +1,21 @@
+{
+  "name": "smart-event-ticketing-system",
+  "version": "1.0.0",
+  "description": "Full-stack Smart Event and Ticketing System built with Node.js and vanilla web technologies.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "event",
+    "ticketing",
+    "nodejs",
+    "fullstack"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
